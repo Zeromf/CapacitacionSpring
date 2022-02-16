@@ -1,0 +1,24 @@
+package es.pildoras.pruebaannotations;
+
+public class DirectorFinanciero implements IEmpleados {
+	private CreacionInformeFinanciero informeFinanciero;
+	
+	
+
+	@Override
+	public String getTareas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
+	
+	
+}

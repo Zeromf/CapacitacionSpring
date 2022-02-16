@@ -1,0 +1,27 @@
+package es.pildoras.IoC;
+
+public class DirectorEmpleado implements IEmpleados {
+	
+	//Creacion de campo tipo CreacionInforme (interfaz)
+	
+	private ICreacionInformes informeNuevo;
+	
+	public DirectorEmpleado(ICreacionInformes informeNuevo) {
+		this.informeNuevo=informeNuevo;
+		
+		
+		
+	}
+
+	@Override
+	public String getTareas() {
+		return "Gestionar la pantilla de la empresa";
+	}
+
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

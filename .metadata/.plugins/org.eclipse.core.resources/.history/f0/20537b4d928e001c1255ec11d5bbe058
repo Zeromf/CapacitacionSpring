@@ -1,0 +1,18 @@
+package es.pildoras.pruebaannotations;
+
+@Component("ComercialExperimentado")
+public class ComecialExperimentado implements IEmpleados {
+
+	@Override
+	public String getTareas() {
+		// TODO Auto-generated method stub
+		return "Vender,vender y vender mas!";
+	}
+
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informe generado por el comercial";
+	}
+
+}

@@ -1,0 +1,37 @@
+package es.pildoras.IoC;
+
+public class SecretarioEmpleado implements IEmpleados {
+
+	private ICreacionInformes informeNuevo;
+
+	public SecretarioEmpleado(ICreacionInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+	
+	
+	@Override
+	public String getTareas() {
+		return "Gestionar la agenda de los jefes";
+	}
+
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informa generado por el secretario " + informeNuevo.getInforme();
+	}
+
+
+	public ICreacionInformes getInformeNuevo() {
+		return informeNuevo;
+	}
+
+
+	public void setInformeNuevo(ICreacionInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package es.pildoras.IoC;
+
+public interface Iempleados {
+		
+	public String getTareas();
+	
+	
+	
+}

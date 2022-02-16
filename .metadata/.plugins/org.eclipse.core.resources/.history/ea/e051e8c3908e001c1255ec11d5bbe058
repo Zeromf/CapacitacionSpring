@@ -1,0 +1,21 @@
+package es.pildoras.pruebaannotations;
+
+public class UsoAnnotations {
+
+	public static void main(String[] args) {
+		// Leer el xml de configuracion
+		
+		
+		
+		//pedir un bean al contenedor
+		
+		
+		
+		//usar el bean
+		
+		
+		//cerrar el contexto
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package es.pildoras.pruebaannotations;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class EmpleadosConfig {
+
+}

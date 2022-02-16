@@ -1,0 +1,25 @@
+package es.pildoras.IoC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class UsoDemoSingletonPrototype {
+
+	public static void main(String[] args) {
+
+		//Cargamos el archivo xml de configuracion
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext2.xml");
+		
+		
+		//peticion de beans al contenedor Spring
+		
+		SecretarioEmpleado Maria= contexto.getBean("miSecretarioEmpleado",SecretarioEmpleado.class);
+
+		DirectorEmpleado Pedro= contexto.getBean("miSecretarioEmpleado",DirectorEmpleado.class);
+
+		System.out.println(Maria);
+		
+		System.out.println(Pedro);
+
+	}
+
+}

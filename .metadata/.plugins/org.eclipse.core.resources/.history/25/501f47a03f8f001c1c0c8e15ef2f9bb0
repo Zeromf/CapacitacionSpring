@@ -1,0 +1,6 @@
+package es.pildoras.pruebaannotations;
+
+@Configuration
+public class EmpleadosConfig {
+
+}

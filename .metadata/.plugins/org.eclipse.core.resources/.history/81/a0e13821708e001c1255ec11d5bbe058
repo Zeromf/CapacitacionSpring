@@ -1,0 +1,13 @@
+package es.pildoras.IoC;
+
+public class jefeEmpleado implements IEmpleados {
+	
+	public String getTareas() {
+		
+		return "Gestiono las cuestiones relativas a mis empleados de seccion";
+		
+	}
+	
+	
+
+}

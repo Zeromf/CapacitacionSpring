@@ -1,0 +1,17 @@
+package es.pildoras.IoC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class UsoDemoSingletonPrototype {
+
+	public static void main(String[] args) {
+
+		//Cargamos el archivo xml
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext2.xml");
+		
+		
+		
+		
+	}
+
+}

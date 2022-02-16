@@ -1,0 +1,16 @@
+package es.pildoras.IoC;
+
+public class DirectorEmpleado implements IEmpleados {
+
+	@Override
+	public String getTareas() {
+		return "Gestionar la pantilla de la empresa";
+	}
+
+	@Override
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

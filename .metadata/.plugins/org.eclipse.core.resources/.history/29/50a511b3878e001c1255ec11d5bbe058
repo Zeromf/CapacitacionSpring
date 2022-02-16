@@ -1,0 +1,51 @@
+package es.pildoras.IoC;
+
+public class DirectorEmpleado implements IEmpleados {
+	
+	//Creacion de campo tipo CreacionInforme (interfaz)
+	
+	private ICreacionInformes informeNuevo;
+	
+	
+	private String email;
+	
+	private String nombreEmpresa;
+	
+	//Creacion de constructor que inyecta la depedencia
+	public DirectorEmpleado(ICreacionInformes informeNuevo) {
+		this.informeNuevo=informeNuevo;
+		
+	}
+
+	@Override
+	public String getTareas() {
+		return "Gestionar la pantilla de la empresa";
+	}
+
+	@Override
+	public String getInforme() {
+		
+		return "Informe creado por el director: " + informeNuevo.getInforme();
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setemail(String email) {
+		this.email = email;
+	}
+
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
+
+
+}

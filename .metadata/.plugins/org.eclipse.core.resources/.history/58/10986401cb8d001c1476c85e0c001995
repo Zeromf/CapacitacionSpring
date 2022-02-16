@@ -1,0 +1,27 @@
+package es.pildoras.IoC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class UsoEmpleados {
+
+	public static void main(String[] args) {
+		
+		//Creacion de objetos de tipo Empleado
+		
+		
+		//Iempleados Empleado1=new DirectorEmpleado();
+		
+		//uso de los objetos creados
+
+		//System.out.println(Empleado1.getTareas());
+		  
+		
+		
+		//Cargamos el archivo xml
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Iempleados Juan= contexto.getBean("miEmpleado",Iempleados.class);
+		
+	}
+
+}
