@@ -34,7 +34,7 @@ public class UsoAnnotations2 {
 		
 		//pedir el bean al contenedor
 
-		/*IEmpleados empleado = contexto.getBean("directorFinanciero",IEmpleados.class);
+		/*IEmpleados empleado = contexto.getBean("d irectorFinanciero",IEmpleados.class);
 		
 		
 		System.out.println(empleado.getTareas());
@@ -46,6 +46,7 @@ public class UsoAnnotations2 {
 		DirectorFinanciero empleado = contexto.getBean("directorFinanciero",DirectorFinanciero.class);
 		
 		System.out.println("Email del director: "+ empleado.getEmail());
+		
 		System.out.println("Nombre de la empresa: "+ empleado.getNombreEmpresa());
 		
 	
