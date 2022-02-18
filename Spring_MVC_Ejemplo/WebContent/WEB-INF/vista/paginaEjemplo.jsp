@@ -14,8 +14,10 @@
 
 
 </h1>	
-<a href="muestraFormulario"> Ir al formulario
+<a href="./secundario/muestraFormulario"> Ir al formulario
 </a>
-
+<br><br>
+<a href="./alumno/muestraFormulario"> Ir al formulario de Registro
+</a>
 </body>
 </html>

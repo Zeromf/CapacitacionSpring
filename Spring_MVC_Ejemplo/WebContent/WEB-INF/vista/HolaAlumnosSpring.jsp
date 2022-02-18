@@ -19,7 +19,7 @@ Hola ${param.nombreAlumno} . Bienvenido al curso de Spring
  ${mensajeClaro} 
 </p>
 
-<img alt="foto" src="${request.contextPath}./recursos/imgs/descarga.jpg">
+<img alt="foto" src="${pageContext.request.contextPath}/recursos/imgs/descarga.jpg">
 
 
 </body>
