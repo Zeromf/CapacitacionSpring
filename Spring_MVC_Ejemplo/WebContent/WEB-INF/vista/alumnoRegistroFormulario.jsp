@@ -35,7 +35,6 @@
 			Jujuy<form:radiobutton path="ciudadEstudios" value="Jujuy"/>
 			Salta<form:radiobutton path="ciudadEstudios" value="Salta"/>
 		
-		
 		<br/><br/><br/>
 			Ingles<form:checkbox path="idiomasAlumno" value="Ingles"/>
 			Frances<form:checkbox path="idiomasAlumno" value="Frances"/>
