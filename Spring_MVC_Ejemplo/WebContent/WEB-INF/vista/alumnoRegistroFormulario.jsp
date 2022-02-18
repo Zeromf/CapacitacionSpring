@@ -12,10 +12,12 @@
 	<form:form action="procesarFormulario" modelAttribute="elAlumno" >
 	
 		Nombre: <form:input path="nombre"/>
+		<form:errors path="nombre"/>
 		
 		<br/><br/><br/>
 		
 		apellido: <form:input path="apellido"/>
+		<form:errors path="apellido"/>
 		
 		<br/><br/><br/>
 		Asignaturas:<br/>

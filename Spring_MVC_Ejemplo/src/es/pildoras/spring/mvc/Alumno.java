@@ -1,9 +1,17 @@
 package es.pildoras.spring.mvc;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Alumno {
 
+	@NotNull
+	@Size(min=2 ,message="Campo requerido" )
 	private String nombre ;
+	@NotNull
+	@Size(min=2 ,message="Campo requerido" )
 	private String apellido;
+	
 	private String optativa;
 	private String ciudadEstudios;
 	private String idiomasAlumno;
