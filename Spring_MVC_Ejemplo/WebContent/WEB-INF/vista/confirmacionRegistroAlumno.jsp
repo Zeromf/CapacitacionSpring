@@ -9,13 +9,14 @@
 <body>
 
 
-El alumno con nombre: <strong>${elAlumno.nombre}</strong> y apellido : <strong>${elAlumno.apellido}</strong> se ha registrado con exito
+El alumno con nombre: <strong>${elAlumno.nombre}</strong> y apellido : <strong>${elAlumno.apellido}</strong> y edad
+<strong>${elAlumno.edad}</strong> y E-mail <strong>${elAlumno.email}</strong> se ha registrado con exito
 La asignatura elegida es: <strong>${elAlumno.optativa}</strong>
 <br/>
 La provincia donde iniciara los estudios ${elAlumno.nombre} es: ${elAlumno.ciudadEstudios}
 <br/>
 Los idiomas elegidos por el alumno son: ${elAlumno.idiomasAlumno}
-
+<br/>
 
 </body>
 </html>

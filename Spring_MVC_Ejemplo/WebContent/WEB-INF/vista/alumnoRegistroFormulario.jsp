@@ -12,12 +12,22 @@
 	<form:form action="procesarFormulario" modelAttribute="elAlumno" >
 	
 		Nombre: <form:input path="nombre"/>
-		<form:errors path="nombre"/>
+		<form:errors path="nombre" style="color:red"/>
 		
 		<br/><br/><br/>
 		
-		apellido: <form:input path="apellido"/>
-		<form:errors path="apellido"/>
+		apellido: <form:input path="apellido" />
+		<form:errors path="apellido" style="color:red"/>
+		
+		<br/><br/><br/>
+		
+		edad: <form:input path="edad" />
+		<form:errors path="edad" style="color:blue"/>
+		
+		<br/><br/><br/>
+		
+		email: <form:input path="email" />
+		<form:errors path="email" style="color:red"/>
 		
 		<br/><br/><br/>
 		Asignaturas:<br/>
