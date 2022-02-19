@@ -10,10 +10,10 @@ import javax.validation.constraints.Size;
 public class Alumno {
 
 	@NotBlank
-	@Size(min=2 ,message="Campo requerido" )
+	@Size(min=2)
 	private String nombre ;
 	@NotBlank
-	@Size(min=2 ,message="Campo requerido" )
+	@Size(min=2)
 	private String apellido;
 	private String optativa;
 	private String ciudadEstudios;
