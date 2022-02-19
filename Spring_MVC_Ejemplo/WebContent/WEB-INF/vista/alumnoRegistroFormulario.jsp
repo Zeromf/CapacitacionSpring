@@ -29,7 +29,14 @@
 		email: <form:input path="email" />
 		<form:errors path="email" style="color:red"/>
 		
+		
 		<br/><br/><br/>
+		Codigo Postal: <form:input path="codigoPostal" />
+		<form:errors path="codigoPostal" style="color:blue"/>
+			
+		<br/><br/><br/>
+		
+		
 		Asignaturas:<br/>
 		<form:select path="optativa" multiple="true">
 		
