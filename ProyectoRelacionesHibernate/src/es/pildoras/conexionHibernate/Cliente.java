@@ -17,7 +17,7 @@ public class Cliente {
 	private String direccion;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="id")
+	@ JoinColumn(name="id")
 	private DetallesCliente detallesCliente;
 	
 	public Cliente(){}
@@ -58,6 +58,14 @@ public class Cliente {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+
+	public DetallesCliente getDetallesCliente() {
+		return detallesCliente;
+	}
+
+	public void setDetallesCliente(DetallesCliente detallesCliente) {
+		this.detallesCliente = detallesCliente;
 	}
 
 	

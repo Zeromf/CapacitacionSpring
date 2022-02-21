@@ -11,7 +11,7 @@ public class DetallesCliente {
 	private int id;
 	@Column(name="web")
 	private String web;
-	@Column(name="tlfno")
+	@Column(name="tfno")
 	private String tlfno;
 	@Column(name="comentarios")
 	private String comentarios;
