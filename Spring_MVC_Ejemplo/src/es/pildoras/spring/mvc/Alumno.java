@@ -7,6 +7,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import es.pildoras.spring.mvc.validacionespersonalizadas.CPostalBs;
+
+
 
 public class Alumno {
 
@@ -24,7 +27,8 @@ public class Alumno {
 	private int edad;
 	@Email
 	private String email;
-	@Pattern(regexp="[0-9]{5}",message="Solo 5 valores numericos")
+	//@Pattern(regexp="[0-9]{5}",message="Solo 5 valores numericos")
+	@CPostalBs
 	private String codigoPostal;
 	
 	

@@ -26,6 +26,7 @@
 	
 	<mvc:resources location="recursos/" mapping="/recursos/**"></mvc:resources>
 	
+
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 	
