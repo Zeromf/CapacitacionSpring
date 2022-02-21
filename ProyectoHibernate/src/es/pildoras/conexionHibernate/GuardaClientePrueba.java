@@ -15,7 +15,7 @@ public class GuardaClientePrueba {
 		
 		try {
 			
-			Clientes cliente1=new Clientes("Mariano","Lopez","Varela");
+			Clientes cliente1=new Clientes("Monica","Aguirre","Goya");
 			
 			miSession.beginTransaction();
 			
@@ -24,6 +24,21 @@ public class GuardaClientePrueba {
 			miSession.getTransaction().commit();
 			
 			System.out.println("Registro insertado correctamente en BBDD");
+			
+			//Lectura de registro
+			
+			miSession.beginTransaction();
+			
+			System.out.println("Lectura del registro con Id: "+ cliente1.getId());
+			
+			Clientes clienteInsertado=miSession.get(Clientes.class,cliente1.getId());
+			
+			System.out.println("Registro: "+clienteInsertado);
+			
+			miSession.getTransaction().commit();
+
+			System.out.println("Terminado...");
+
 			
 			miSession.close();
 			

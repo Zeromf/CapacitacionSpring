@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name="clientes")
 public class Clientes {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Id")
 	private int id;
 	@Column(name="Nombre")
@@ -14,11 +15,6 @@ public class Clientes {
 	private String apellido;
 	@Column(name="Direccion")
 	private String direccion;
-	
-	
-	
-	
-	
 	
 	
 	public Clientes(){}
@@ -59,6 +55,12 @@ public class Clientes {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+
+	@Override
+	public String toString() {
+		return "Clientes [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
+				+ "]";
 	}
 	
 	
