@@ -28,7 +28,6 @@ public class CPostalBsValidacion implements ConstraintValidator<CPostalBs, Strin
 			valCodigo=true;
 			
 		}
-		
 		return valCodigo;
 		
 	}
