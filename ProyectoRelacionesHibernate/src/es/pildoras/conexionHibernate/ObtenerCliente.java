@@ -27,22 +27,28 @@ public class ObtenerCliente {
 			
 			System.out.println(detallesDeCliente.getElCliente());
 			
+			
+			System.out.println("Ahora vamos a eliminar en cascada ");
+			
+			miSession.delete(detallesDeCliente);
+			
 			//Esto guarda la informacion en las dos tablas relacionadas
 						
 			miSession.getTransaction().commit();
 				
 			
 			miSession.close();
+		}
 			
-		} finally{
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 			
+		 finally{
+			miSession.close();			
 			miFactory.close();
 			
 		}
-		
-		
-		
-		
-	}
 
+	}
 }
