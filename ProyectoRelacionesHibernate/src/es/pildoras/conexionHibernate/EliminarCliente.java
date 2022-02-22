@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class InsertaCliente {
+public class EliminarCliente {
 
 	public static void main(String[] args) {
 
@@ -17,23 +17,27 @@ public class InsertaCliente {
 		
 		try {
 			
-			Cliente cliente1=new Cliente("Agus","Montoya","Londres");
-			
-			DetallesCliente detallesCliente1=new DetallesCliente("Uala.com .ar","555555","Cliente ptencial");
-			
-			//Asociar los objetos 
-			
-			cliente1.setDetallesCliente(detallesCliente1);
-			
 			miSession.beginTransaction();
 			
+			Cliente elCliente = miSession.get(Cliente.class,3);
+			if (elCliente!=null) {
+				
+				System.out.println("Voy a eliminar al cliente: "+ elCliente.getNombre());
+				
+				miSession.delete(elCliente);
+			}
+			
 			//Esto guarda la informacion en las dos tablas relacionadas
-			
-			miSession.save(cliente1);
-			
+						
 			miSession.getTransaction().commit();
-			
-			System.out.println("Registro insertado correctamente en BBDD");
+				
+			if (elCliente!=null) {
+				
+				System.out.println("Registro eliminado correctamente en BBDD");
+			}else {
+				
+				System.out.println("Nada que eliminar");				
+			}
 			
 			
 			miSession.close();
