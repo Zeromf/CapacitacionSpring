@@ -1,16 +1,20 @@
 package es.pildoras.conexionHibernate;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class EliminarCliente {
+public class ObtenerPedidosCliente {
 
 	public static void main(String[] args) {
 
 		SessionFactory miFactory = new Configuration().configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Cliente.class)
 				.addAnnotatedClass(DetallesCliente.class)
+				.addAnnotatedClass(Pedido.class)
 				.buildSessionFactory();
 		
 		Session miSession=miFactory.openSession();
@@ -19,31 +23,28 @@ public class EliminarCliente {
 			
 			miSession.beginTransaction();
 			
-			Cliente elCliente = miSession.get(Cliente.class,4);
-			if (elCliente!=null) {
-				
-				System.out.println("Voy a eliminar al cliente: "+ elCliente.getNombre());
-				
-				miSession.delete(elCliente);
-			}
+			//obtener el cliente de la tabla Cliente de la BBDD
+			Cliente elCliente=miSession.get(Cliente.class, 2);
 			
-			//Esto guarda la informacion en las dos tablas relacionadas
-						
+			System.out.println("Cliente: "+ elCliente);
+			
+			System.out.println("Pedidos: "+ elCliente.getPedidos());
+			
 			miSession.getTransaction().commit();
-				
-			if (elCliente!=null) {
-				
-				System.out.println("Registro eliminado correctamente en BBDD");
-			}else {
-				
-				System.out.println("Nada que eliminar");				
-			}
+			
+			System.out.println("Registro insertado correctamente en BBDD");
 			
 			
 			miSession.close();
 			
-		} finally{
+		} catch(Exception e) {
 			
+			e.printStackTrace();
+			
+		} 
+		
+		finally{
+			miSession.close();
 			miFactory.close();
 			
 		}

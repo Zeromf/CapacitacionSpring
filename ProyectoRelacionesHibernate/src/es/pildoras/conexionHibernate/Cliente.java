@@ -1,5 +1,8 @@
 package es.pildoras.conexionHibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -20,6 +23,11 @@ public class Cliente {
 	@ JoinColumn(name="id")
 	private DetallesCliente detallesCliente;
 	
+	@OneToMany(mappedBy="cliente")
+	private List<Pedido> pedidos;
+	
+	
+	
 	public Cliente(){}
 	
 	/**
@@ -34,6 +42,19 @@ public class Cliente {
 		this.direccion = direccion;
 	}
 	
+	
+	
+	public void agregarPedidos(Pedido elPedido) {
+		
+		if (pedidos==null || pedidos.isEmpty()) {
+			pedidos=new ArrayList<Pedido>();
+			pedidos.add(elPedido);
+		}
+		
+		elPedido.setCliente(this);
+		
+	}
+		
 	
 	public int getId() {
 		return id;
@@ -68,12 +89,18 @@ public class Cliente {
 		this.detallesCliente = detallesCliente;
 	}
 
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + "]";
 	}
-
-	
 
 	
 }

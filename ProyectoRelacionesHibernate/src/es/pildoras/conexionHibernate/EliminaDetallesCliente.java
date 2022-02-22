@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class EliminarCliente {
+public class EliminaDetallesCliente {
 
 	public static void main(String[] args) {
 
@@ -19,19 +19,22 @@ public class EliminarCliente {
 			
 			miSession.beginTransaction();
 			
-			Cliente elCliente = miSession.get(Cliente.class,4);
-			if (elCliente!=null) {
+			DetallesCliente detallesDelCliente = miSession.get(DetallesCliente.class,2);
+			
+			detallesDelCliente.getElCliente().setDetallesCliente(null);
+			
+			if (detallesDelCliente!=null) {
 				
-				System.out.println("Voy a eliminar al cliente: "+ elCliente.getNombre());
+				//System.out.println("Voy a eliminar al cliente: "+ detallesDelCliente.getNombre());
 				
-				miSession.delete(elCliente);
+				miSession.delete(detallesDelCliente);
 			}
 			
 			//Esto guarda la informacion en las dos tablas relacionadas
 						
 			miSession.getTransaction().commit();
 				
-			if (elCliente!=null) {
+			if (detallesDelCliente!=null) {
 				
 				System.out.println("Registro eliminado correctamente en BBDD");
 			}else {

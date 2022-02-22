@@ -21,7 +21,7 @@ public class ObtenerCliente {
 			
 			// Obtener DetallesCliente
 			
-			DetallesCliente detallesDeCliente = miSession.get(DetallesCliente.class,4);
+			DetallesCliente detallesDeCliente = miSession.get(DetallesCliente.class,1);
 			
 			System.out.println(detallesDeCliente);
 			
