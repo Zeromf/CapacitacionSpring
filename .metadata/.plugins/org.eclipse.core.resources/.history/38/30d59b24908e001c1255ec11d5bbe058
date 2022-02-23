@@ -1,5 +1,0 @@
-package es.pildoras.pruebaannotations;
-
-public interface IEmpleados {
-
-}

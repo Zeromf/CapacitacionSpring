@@ -6,6 +6,8 @@ import java.util.GregorianCalendar;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
 
 public class ObtenerPedidosCliente {
 
@@ -24,18 +26,30 @@ public class ObtenerPedidosCliente {
 			miSession.beginTransaction();
 			
 			//obtener el cliente de la tabla Cliente de la BBDD
-			Cliente elCliente=miSession.get(Cliente.class, 2);
+			//Cliente elCliente=miSession.get(Cliente.class, 2);
+			
+			Query<Cliente> consulta=miSession.createQuery("SELECT CL FROM Cliente CL JOIN FETCH CL.pedidos WHERE "
+					+ "CL.id=:elClienteId",Cliente.class);
+			
+			consulta.setParameter("elClienteId", 2);
+			
+			Cliente elCliente=consulta.getSingleResult();
 			
 			System.out.println("Cliente: "+ elCliente);
 			
-			System.out.println("Pedidos: "+ elCliente.getPedidos());
+
 			
 			miSession.getTransaction().commit();
 			
-			System.out.println("Registro insertado correctamente en BBDD");
-			
-			
 			miSession.close();
+			
+			for (Pedido pedidos : elCliente.getPedidos()  ) {
+				
+				System.out.println("Pedidos: "+pedidos);
+
+			}
+			
+
 			
 		} catch(Exception e) {
 			
