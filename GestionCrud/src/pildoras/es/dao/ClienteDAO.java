@@ -9,6 +9,9 @@ public interface ClienteDAO {
 	public List<Cliente> getClientes();
 
 	public void insertarCliente(Cliente elCliente);
+
+	public Cliente getClientes(int id);
+
 	
 	
 }
