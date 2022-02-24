@@ -50,7 +50,7 @@ public class ConectaCRUD extends HttpServlet {
 			
 			Connection miConexion=DriverManager.getConnection(jdbcUrl,usuario,contra);
 			
-			out.print("CONETCTADO!!");
+			out.print("CONECTADO!!");
 			
 			miConexion.close();
 			
