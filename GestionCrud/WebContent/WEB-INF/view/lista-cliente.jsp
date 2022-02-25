@@ -46,9 +46,9 @@
 
 </table>
 <br/>
-
+<p>
 <input type="button" value="Agregar Cliente" onClick="window.location.href='muestraFormularioAgregar';return false;" />
-
+</p>
 
 </body>
 </html>
