@@ -78,6 +78,25 @@ public class ClienteDAOclase implements ClienteDAO {
 
 
 
+	@Override
+	@Transactional
+	public void eliminarCliente(int id) {
+
+		//Obtener la sesion
+		Session miSession=SessionFactory.getCurrentSession();
+		
+		// Borrar el cliente de la BBDD utilizando criterio su Id correspondiente
+		
+		Query consulta=miSession.createQuery("delete from Cliente where id=:IdDelCliente");
+		
+		consulta.setParameter("IdDelCliente", id);
+		
+		consulta.executeUpdate();
+		
+	}
+
+
+
 
 
 }

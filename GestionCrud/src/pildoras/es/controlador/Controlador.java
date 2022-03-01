@@ -75,5 +75,17 @@ public class Controlador {
 			
 			return "formularioCliente";
 		}
+		
+		
+		@GetMapping("/eliminar")
+		public String eliminarCliente(@RequestParam("clienteId") int Id) {
+			
+			// eliminar el cliente 
+			clienteDAO.eliminarCliente(Id);
+			
+			//Redireccionar a la lista de clientes
+			
+			return "redirect:/cliente/lista";
+		}
 	
 }
